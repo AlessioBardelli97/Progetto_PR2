@@ -1,0 +1,35 @@
+																												Alessio Bardelli 544270 
+PROGETTO INTERMEDIO 2: REALIZZAZIONE DI UN INTERPRETE																					
+
+All’interno della cartella del progetto sono presenti i seguenti file:
+
+	- interprete.ml
+	- test_for_ApplyOver.ml
+	- test_for_Etree.ml
+	- test_for_Select.ml
+	- test_for_Update.ml
+
+Il primo file contiene la sintassi astratta del linguaggio didattico funzione  visto a lezione estesa per gestisce gli alberi binari di espressioni,
+i tipi esprimibili estesi con il costruttore Empty e Node, e l’interprete di tale linguaggio
+ 
+Il secondo,terzo,quarto, e quinto file contengono dei test utili per verificare la correttezza della implementazione dei nuovi costrutti linguistici aggiunti.
+
+E’ stato inserito il tipo tree e il tipo exp è stato esteso con ETree, ApplyOver, Update e Select.
+
+Per permettere una corretta valutazione degli alberi, ho aggiunto un typechecker dinamico per gli alberi che utilizzo in tutti i costruttori aggiuntivi.
+
+Per ogni costruttore aggiunto ho fatto un test per controllare la correttezza al caso standard e diversi test per verificare
+che i vari casi limite che si possono presentare siano gestiti correttamente.
+
+Ho deciso che le uniche espressioni legali associate ad ogni nodo di un albero siano solo espressioni che si possono valutare in interi o booleani
+per questo ho scritto un test dove un albero ha associata un'espressione che non è valutata in interi o booleani, mostrando che solleva un'eccezione.
+L'interprete solleva un'eccezione anche quando l'albero passato è misto e non solo di un tipo di espressioni.
+
+Per quanto riguarda l'ApplyOver, un'eccezione viene sollevata quando il secondo argomento passato non è un albero e quando il primo parametro,
+ovvero la funzione, passata all'ApplyOver ha come argomenti dei booleani ed è passata ad un albero di interi.
+
+Per l'Update testo il caso in cui non si passa una funzione (non rispettando la specifica proposta) e il caso in cui non si passa come richiesto un albero,
+e il caso in cui la funzione passata come parametro ha come argomento un booleano ed è passata ad un albero di interi.
+
+Infine per verificare il corretto funzionamento della Select mi sono servito degli stessi test che ho usato per l'Update con l'aggiunta 
+di un test per mostrare come l'interprete gestisce il caso in cui la funzione passata alla select non ritorna un booleano, come era previsto avrebbe fatto.

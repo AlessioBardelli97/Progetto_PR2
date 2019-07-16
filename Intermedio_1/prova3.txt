@@ -1,0 +1,5 @@
+Si richiede di progettare, realizzare e documentare la collezione DataCounter<E>.
+DataCounter<E> è una collezione che permette di associare un valore numerico a
+ogni oggetto di tipo E. Intuitivamente la collezione si comporta come un 
+dizionario con la differenza che associa un valore numerico a ogni dato di tipo E
+presente nella struttura. Le operazioni sono descritte di seguito.

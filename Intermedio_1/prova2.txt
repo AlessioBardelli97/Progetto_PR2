@@ -1,0 +1,4 @@
+il progetto ha l'obbiettivo di applicare i concetti e le tecniche di
+programmazione orientate agli oggetti prese in considerazione durante il corso.
+Lo scopo del progetto è lo sviluppo di un componente software di supporto alla 
+gestione di un insieme di dati. 
